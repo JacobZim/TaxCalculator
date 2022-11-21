@@ -32,7 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global._2022.vbForms_FileLoader.Form1
+            Me.MainForm = Global._2022.vbForms_FileLoader.Payroll
         End Sub
     End Class
 End Namespace

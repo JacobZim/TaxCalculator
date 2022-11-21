@@ -1,38 +1,38 @@
 ﻿Imports System.IO
 
-Public Class Form1
-    Private Sub AddButton_Click(sender As Object, e As EventArgs) Handles AddButton.Click
+Public Class Payroll
+    Private Sub AddButton_Click(sender As Object, e As EventArgs)
         If (TextBox1.Text.Length() > 0) Then
-            ListBox1.Items.Add(TextBox1.Text)
+            EmployeeListBox.Items.Add(TextBox1.Text)
             TextBox1.Text = ""
         End If
     End Sub
 
-    Private Sub Delete_Click(sender As Object, e As EventArgs) Handles Delete.Click
-        Dim Index As Integer = ListBox1.SelectedIndex()
+    Private Sub Delete_Click(sender As Object, e As EventArgs)
+        Dim Index As Integer = EmployeeListBox.SelectedIndex()
         If Index >= 0 Then
-            ListBox1.Items.RemoveAt(Index)
+            EmployeeListBox.Items.RemoveAt(Index)
         End If
     End Sub
 
-    Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
+    Private Sub Save_Click(sender As Object, e As EventArgs)
         Dim sFileName As String = "employees.txt"
         Dim fStreamWriter As StreamWriter = File.CreateText(sFileName)
         Dim count, i As Integer
 
-        count = ListBox1.Items.Count
+        count = EmployeeListBox.Items.Count
         fStreamWriter.WriteLine(count)
         For i = 0 To count - 1
-            fStreamWriter.WriteLine(ListBox1.Items(i))
+            fStreamWriter.WriteLine(EmployeeListBox.Items(i))
         Next
         fStreamWriter.Flush()
         fStreamWriter.Close()
 
     End Sub
 
-    Private Sub Load_Click(sender As Object, e As EventArgs) Handles Load.Click
+    Private Sub Load_Click(sender As Object, e As EventArgs)
         ' first erase any old data
-        ListBox1.Items.Clear()
+        EmployeeListBox.Items.Clear()
 
         Dim sFileName As String = "employees.txt"
         If (File.Exists(sFileName)) Then
@@ -44,11 +44,23 @@ Public Class Form1
             count = fStreamReader.ReadLine
             For i = 1 To count
                 name = fStreamReader.ReadLine
-                ListBox1.Items.Add(name)
+                EmployeeListBox.Items.Add(name)
             Next
 
             fStreamReader.Close()
         End If 'file exists
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
     End Sub
 End Class
