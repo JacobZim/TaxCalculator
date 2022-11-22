@@ -1,6 +1,11 @@
 ﻿Imports System.IO
 
 Public Class Payroll
+
+    Dim num As Integer = 12
+
+
+
     Private Sub AddButton_Click(sender As Object, e As EventArgs)
         If (TextBox1.Text.Length() > 0) Then
             EmployeeListBox.Items.Add(TextBox1.Text)
@@ -63,4 +68,5 @@ Public Class Payroll
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
     End Sub
+
 End Class

@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TaxCalculator", "TaxCalculator.vbproj", "{FF246212-3F0A-4163-A344-DB49DA76C05A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7CCF1729-A588-4EE4-939F-443F99DD075D}"
+	ProjectSection(SolutionItems) = preProject
+		Employee.vb = Employee.vb
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

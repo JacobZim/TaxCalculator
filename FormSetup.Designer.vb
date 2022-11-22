@@ -27,6 +27,10 @@ Partial Class Setup
         Me.Save = New System.Windows.Forms.Button()
         Me.Delete = New System.Windows.Forms.Button()
         Me.EmployeeListBox = New System.Windows.Forms.ListBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'AddButton
@@ -78,6 +82,28 @@ Partial Class Setup
         Me.EmployeeListBox.Size = New System.Drawing.Size(144, 225)
         Me.EmployeeListBox.TabIndex = 9
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PayrollToolStripMenuItem, Me.SetupToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.MdiWindowListItem = Me.PayrollToolStripMenuItem
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
+        Me.MenuStrip1.TabIndex = 10
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'PayrollToolStripMenuItem
+        '
+        Me.PayrollToolStripMenuItem.Name = "PayrollToolStripMenuItem"
+        Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+        Me.PayrollToolStripMenuItem.Text = "Payroll"
+        '
+        'SetupToolStripMenuItem
+        '
+        Me.SetupToolStripMenuItem.Name = "SetupToolStripMenuItem"
+        Me.SetupToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
+        Me.SetupToolStripMenuItem.Text = "Setup"
+        '
         'Setup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -88,9 +114,14 @@ Partial Class Setup
         Me.Controls.Add(Me.Save)
         Me.Controls.Add(Me.Delete)
         Me.Controls.Add(Me.AddButton)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Setup"
         Me.Text = "Setup"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -99,4 +130,7 @@ Partial Class Setup
     Friend WithEvents Save As Button
     Friend WithEvents Delete As Button
     Friend WithEvents EmployeeListBox As ListBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents PayrollToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SetupToolStripMenuItem As ToolStripMenuItem
 End Class
