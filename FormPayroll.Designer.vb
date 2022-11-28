@@ -42,6 +42,11 @@ Partial Class Payroll
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.ListBox5 = New System.Windows.Forms.ListBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -213,11 +218,56 @@ Partial Class Payroll
         Me.SetupToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
         Me.SetupToolStripMenuItem.Text = "Setup"
         '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(12, 318)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(56, 30)
+        Me.ListBox1.TabIndex = 25
+        '
+        'ListBox2
+        '
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.Location = New System.Drawing.Point(12, 362)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(56, 30)
+        Me.ListBox2.TabIndex = 26
+        '
+        'ListBox3
+        '
+        Me.ListBox3.FormattingEnabled = True
+        Me.ListBox3.Location = New System.Drawing.Point(74, 318)
+        Me.ListBox3.Name = "ListBox3"
+        Me.ListBox3.Size = New System.Drawing.Size(54, 30)
+        Me.ListBox3.TabIndex = 27
+        '
+        'ListBox4
+        '
+        Me.ListBox4.FormattingEnabled = True
+        Me.ListBox4.Location = New System.Drawing.Point(74, 362)
+        Me.ListBox4.Name = "ListBox4"
+        Me.ListBox4.Size = New System.Drawing.Size(54, 30)
+        Me.ListBox4.TabIndex = 28
+        '
+        'ListBox5
+        '
+        Me.ListBox5.FormattingEnabled = True
+        Me.ListBox5.Location = New System.Drawing.Point(135, 318)
+        Me.ListBox5.Name = "ListBox5"
+        Me.ListBox5.Size = New System.Drawing.Size(56, 30)
+        Me.ListBox5.TabIndex = 29
+        '
         'Payroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(661, 404)
+        Me.Controls.Add(Me.ListBox5)
+        Me.Controls.Add(Me.ListBox4)
+        Me.Controls.Add(Me.ListBox3)
+        Me.Controls.Add(Me.ListBox2)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -267,4 +317,9 @@ Partial Class Payroll
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents PayrollToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SetupToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents ListBox5 As ListBox
 End Class
