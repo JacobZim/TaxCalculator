@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Payroll
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,93 +20,88 @@ Partial Class Payroll
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.EmployeeListBox = New System.Windows.Forms.ListBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.ListBoxEmployee = New System.Windows.Forms.ListBox()
+        Me.TextBoxHoursWorked = New System.Windows.Forms.TextBox()
+        Me.ButtonCalculate = New System.Windows.Forms.Button()
+        Me.TextBoxFICA = New System.Windows.Forms.TextBox()
+        Me.TextBoxFederal = New System.Windows.Forms.TextBox()
+        Me.TextBoxState = New System.Windows.Forms.TextBox()
+        Me.TextBoxNet = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBoxGross = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBoxSalary = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
-        Me.ListBox5 = New System.Windows.Forms.ListBox()
+        Me.Load_Employees = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'EmployeeListBox
+        'ListBoxEmployee
         '
-        Me.EmployeeListBox.FormattingEnabled = True
-        Me.EmployeeListBox.Location = New System.Drawing.Point(47, 88)
-        Me.EmployeeListBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.EmployeeListBox.Name = "EmployeeListBox"
-        Me.EmployeeListBox.Size = New System.Drawing.Size(144, 225)
-        Me.EmployeeListBox.TabIndex = 0
+        Me.ListBoxEmployee.FormattingEnabled = True
+        Me.ListBoxEmployee.Location = New System.Drawing.Point(47, 88)
+        Me.ListBoxEmployee.Margin = New System.Windows.Forms.Padding(2)
+        Me.ListBoxEmployee.Name = "ListBoxEmployee"
+        Me.ListBoxEmployee.Size = New System.Drawing.Size(144, 225)
+        Me.ListBoxEmployee.TabIndex = 0
         '
-        'TextBox1
+        'TextBoxHoursWorked
         '
-        Me.TextBox1.Location = New System.Drawing.Point(331, 325)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.TextBoxHoursWorked.Location = New System.Drawing.Point(331, 325)
+        Me.TextBoxHoursWorked.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBoxHoursWorked.Name = "TextBoxHoursWorked"
+        Me.TextBoxHoursWorked.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxHoursWorked.TabIndex = 1
         '
-        'Button1
+        'ButtonCalculate
         '
-        Me.Button1.Location = New System.Drawing.Point(340, 350)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonCalculate.Location = New System.Drawing.Point(311, 350)
+        Me.ButtonCalculate.Name = "ButtonCalculate"
+        Me.ButtonCalculate.Size = New System.Drawing.Size(140, 23)
+        Me.ButtonCalculate.TabIndex = 6
+        Me.ButtonCalculate.Text = "Compute Deductions"
+        Me.ButtonCalculate.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'TextBoxFICA
         '
-        Me.TextBox2.Location = New System.Drawing.Point(498, 145)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 7
+        Me.TextBoxFICA.Location = New System.Drawing.Point(498, 145)
+        Me.TextBoxFICA.Name = "TextBoxFICA"
+        Me.TextBoxFICA.ReadOnly = True
+        Me.TextBoxFICA.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxFICA.TabIndex = 7
         '
-        'TextBox3
+        'TextBoxFederal
         '
-        Me.TextBox3.Location = New System.Drawing.Point(498, 195)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 8
+        Me.TextBoxFederal.Location = New System.Drawing.Point(498, 195)
+        Me.TextBoxFederal.Name = "TextBoxFederal"
+        Me.TextBoxFederal.ReadOnly = True
+        Me.TextBoxFederal.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxFederal.TabIndex = 8
         '
-        'TextBox4
+        'TextBoxState
         '
-        Me.TextBox4.Location = New System.Drawing.Point(498, 249)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 9
+        Me.TextBoxState.Location = New System.Drawing.Point(498, 249)
+        Me.TextBoxState.Name = "TextBoxState"
+        Me.TextBoxState.ReadOnly = True
+        Me.TextBoxState.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxState.TabIndex = 9
         '
-        'TextBox5
+        'TextBoxNet
         '
-        Me.TextBox5.Location = New System.Drawing.Point(498, 301)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 10
+        Me.TextBoxNet.Location = New System.Drawing.Point(498, 301)
+        Me.TextBoxNet.Name = "TextBoxNet"
+        Me.TextBoxNet.ReadOnly = True
+        Me.TextBoxNet.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxNet.TabIndex = 10
         '
         'Label1
         '
@@ -153,13 +148,13 @@ Partial Class Payroll
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Net Pay"
         '
-        'TextBox6
+        'TextBoxGross
         '
-        Me.TextBox6.Location = New System.Drawing.Point(498, 88)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 16
+        Me.TextBoxGross.Location = New System.Drawing.Point(498, 88)
+        Me.TextBoxGross.Name = "TextBoxGross"
+        Me.TextBoxGross.ReadOnly = True
+        Me.TextBoxGross.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxGross.TabIndex = 16
         '
         'Label6
         '
@@ -170,13 +165,12 @@ Partial Class Payroll
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Gross Pay"
         '
-        'TextBox7
+        'TextBoxSalary
         '
-        Me.TextBox7.Location = New System.Drawing.Point(268, 88)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 19
+        Me.TextBoxSalary.Location = New System.Drawing.Point(268, 88)
+        Me.TextBoxSalary.Name = "TextBoxSalary"
+        Me.TextBoxSalary.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxSalary.TabIndex = 19
         '
         'Label7
         '
@@ -198,19 +192,12 @@ Partial Class Payroll
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PayrollToolStripMenuItem, Me.SetupToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SetupToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.MdiWindowListItem = Me.PayrollToolStripMenuItem
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(661, 24)
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'PayrollToolStripMenuItem
-        '
-        Me.PayrollToolStripMenuItem.Name = "PayrollToolStripMenuItem"
-        Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
-        Me.PayrollToolStripMenuItem.Text = "Payroll"
         '
         'SetupToolStripMenuItem
         '
@@ -218,75 +205,39 @@ Partial Class Payroll
         Me.SetupToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
         Me.SetupToolStripMenuItem.Text = "Setup"
         '
-        'ListBox1
+        'Load_Employees
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(12, 318)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(56, 30)
-        Me.ListBox1.TabIndex = 25
-        '
-        'ListBox2
-        '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(12, 362)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(56, 30)
-        Me.ListBox2.TabIndex = 26
-        '
-        'ListBox3
-        '
-        Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.Location = New System.Drawing.Point(74, 318)
-        Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(54, 30)
-        Me.ListBox3.TabIndex = 27
-        '
-        'ListBox4
-        '
-        Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.Location = New System.Drawing.Point(74, 362)
-        Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(54, 30)
-        Me.ListBox4.TabIndex = 28
-        '
-        'ListBox5
-        '
-        Me.ListBox5.FormattingEnabled = True
-        Me.ListBox5.Location = New System.Drawing.Point(135, 318)
-        Me.ListBox5.Name = "ListBox5"
-        Me.ListBox5.Size = New System.Drawing.Size(56, 30)
-        Me.ListBox5.TabIndex = 29
+        Me.Load_Employees.Location = New System.Drawing.Point(47, 318)
+        Me.Load_Employees.Name = "Load_Employees"
+        Me.Load_Employees.Size = New System.Drawing.Size(144, 23)
+        Me.Load_Employees.TabIndex = 31
+        Me.Load_Employees.Text = "Load Employee List"
+        Me.Load_Employees.UseVisualStyleBackColor = True
         '
         'Payroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(661, 404)
-        Me.Controls.Add(Me.ListBox5)
-        Me.Controls.Add(Me.ListBox4)
-        Me.Controls.Add(Me.ListBox3)
-        Me.Controls.Add(Me.ListBox2)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.Load_Employees)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.TextBoxSalary)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.TextBoxGross)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.EmployeeListBox)
-        Me.IsMdiContainer = True
+        Me.Controls.Add(Me.TextBoxNet)
+        Me.Controls.Add(Me.TextBoxState)
+        Me.Controls.Add(Me.TextBoxFederal)
+        Me.Controls.Add(Me.TextBoxFICA)
+        Me.Controls.Add(Me.ButtonCalculate)
+        Me.Controls.Add(Me.TextBoxHoursWorked)
+        Me.Controls.Add(Me.ListBoxEmployee)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Payroll"
         Me.Text = "Payroll"
@@ -297,29 +248,24 @@ Partial Class Payroll
 
     End Sub
 
-    Friend WithEvents EmployeeListBox As ListBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents ListBoxEmployee As ListBox
+    Friend WithEvents TextBoxHoursWorked As TextBox
+    Friend WithEvents ButtonCalculate As Button
+    Friend WithEvents TextBoxFICA As TextBox
+    Friend WithEvents TextBoxFederal As TextBox
+    Friend WithEvents TextBoxState As TextBox
+    Friend WithEvents TextBoxNet As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBoxGross As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBoxSalary As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents PayrollToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SetupToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents ListBox2 As ListBox
-    Friend WithEvents ListBox3 As ListBox
-    Friend WithEvents ListBox4 As ListBox
-    Friend WithEvents ListBox5 As ListBox
+    Friend WithEvents Load_Employees As Button
 End Class

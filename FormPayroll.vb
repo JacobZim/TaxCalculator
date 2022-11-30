@@ -2,16 +2,16 @@
 
 Public Class Payroll
     Private Sub AddButton_Click(sender As Object, e As EventArgs)
-        If (TextBox1.Text.Length() > 0) Then
-            EmployeeListBox.Items.Add(TextBox1.Text)
-            TextBox1.Text = ""
+        If (TextBoxHoursWorked.Text.Length() > 0) Then
+            ListBoxEmployee.Items.Add(TextBoxHoursWorked.Text)
+            TextBoxHoursWorked.Text = ""
         End If
     End Sub
 
     Private Sub Delete_Click(sender As Object, e As EventArgs)
-        Dim Index As Integer = EmployeeListBox.SelectedIndex()
+        Dim Index As Integer = ListBoxEmployee.SelectedIndex()
         If Index >= 0 Then
-            EmployeeListBox.Items.RemoveAt(Index)
+            ListBoxEmployee.Items.RemoveAt(Index)
         End If
     End Sub
 
@@ -20,19 +20,19 @@ Public Class Payroll
         Dim fStreamWriter As StreamWriter = File.CreateText(sFileName)
         Dim count, i As Integer
 
-        count = EmployeeListBox.Items.Count
+        count = ListBoxEmployee.Items.Count
         fStreamWriter.WriteLine(count)
         For i = 0 To count - 1
-            fStreamWriter.WriteLine(EmployeeListBox.Items(i))
+            fStreamWriter.WriteLine(ListBoxEmployee.Items(i))
         Next
         fStreamWriter.Flush()
         fStreamWriter.Close()
 
     End Sub
 
-    Private Sub Load_Click(sender As Object, e As EventArgs)
+    Private Sub Load_Employees_Click(sender As Object, e As EventArgs) Handles Load_Employees.Click
         ' first erase any old data
-        EmployeeListBox.Items.Clear()
+        ListBoxEmployee.Items.Clear()
 
         Dim sFileName As String = "employees.txt"
         If (File.Exists(sFileName)) Then
@@ -44,7 +44,11 @@ Public Class Payroll
             count = fStreamReader.ReadLine
             For i = 1 To count
                 name = fStreamReader.ReadLine
-                EmployeeListBox.Items.Add(name)
+                ListBoxEmployee.Items.Add(name)
+                fStreamReader.ReadLine()
+                fStreamReader.ReadLine()
+                fStreamReader.ReadLine()
+                fStreamReader.ReadLine()
             Next
 
             fStreamReader.Close()
@@ -52,15 +56,31 @@ Public Class Payroll
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
+    Private Sub SetupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetupToolStripMenuItem.Click
+        Setup.Show()
+        Setup.Load_Click_Function()
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
+    Private Sub ListBoxEmployee_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBoxEmployee.SelectedIndexChanged
+        CalculatePay()
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub CalculatePay()
+        Setup.Load_Click_Function()
+        If (ListBoxEmployee.SelectedIndex >= 0) Then
+            Dim Index As Integer = ListBoxEmployee.SelectedIndex()
+            TextBoxSalary.Text = Setup.ListBoxSalary.Items.Item(Index).ToString
+            If (TextBoxHoursWorked.Text.Length > 0) Then
+                TextBoxGross.Text = CStr(CDbl(Setup.ListBoxSalary.Items.Item(Index)) * CDbl(TextBoxHoursWorked.Text))
+                TextBoxFICA.Text = CStr(CDbl(TextBoxGross.Text) * CDbl(Setup.ListBoxFICA.Items.Item(Index)))
+                TextBoxFederal.Text = CStr(CDbl(TextBoxGross.Text) * CDbl(Setup.ListBoxFederal.Items.Item(Index)))
+                TextBoxState.Text = CStr(CDbl(TextBoxGross.Text) * CDbl(Setup.ListBoxState.Items.Item(Index)))
+                TextBoxNet.Text = CStr(CDbl(TextBoxGross.Text) - (CDbl(TextBoxFICA.Text) + CDbl(TextBoxFederal.Text) + CDbl(TextBoxState.Text)))
+            End If
+        End If
+    End Sub
 
+    Private Sub ButtonCalculate_Click(sender As Object, e As EventArgs) Handles ButtonCalculate.Click
+        CalculatePay()
     End Sub
 End Class
